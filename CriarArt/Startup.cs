@@ -1,3 +1,5 @@
+using CriarArt.Context;
+using CriarArt.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,11 +24,15 @@ namespace CriarArt
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            // In production, the Angular files will be served from this directory
+            // In production, the Angular files wilßl be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddDbContext<OracleContext>();
+
+            StartupDatabase.FillData(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

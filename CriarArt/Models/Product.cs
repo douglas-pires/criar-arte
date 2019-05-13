@@ -1,10 +1,10 @@
-﻿using System;
-namespace CriarArt.Models
+﻿namespace CriarArt.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public Product()
-        {
-        }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Image { get; set; }
+        public string Description { get; set; }
     }
 }
