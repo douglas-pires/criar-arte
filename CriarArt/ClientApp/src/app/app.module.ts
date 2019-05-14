@@ -42,11 +42,11 @@ import { CheckoutComponent } from './checkout/checkout.component';
       { path: 'register', component: RegisterComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'products', component: ProductsComponent },
-      { path: 'product-detail', component: ProductDetailComponent },
+      { path: 'products/:id', component: ProductDetailComponent },
       { path: 'checkout', component: CheckoutComponent },
-    ])
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

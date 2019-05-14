@@ -53,6 +53,13 @@ namespace CriarArt
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -8,13 +8,19 @@ export function getBaseUrl() {
   return document.getElementsByTagName('base')[0].href;
 }
 
+export function getApiUrl() {
+  return 'https://localhost:5001/';
+}
+
 const providers = [
-  { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] }
+  { provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] },
+  { provide: 'BASE_API_URL', useFactory: getApiUrl, deps: [] },
 ];
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic(providers).bootstrapModule(AppModule)
+platformBrowserDynamic(providers)
+  .bootstrapModule(AppModule)
   .catch(err => console.log(err));

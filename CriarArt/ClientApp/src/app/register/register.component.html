@@ -10,24 +10,57 @@
   </div>
   <form action="cadastrar" class="login-form" method="post">
     <div class="form-group">
-      <input id="signup-name" name="nome" type="text" class="form-control" placeholder="Seu nome">
+      <input
+        id="signup-name"
+        name="nome"
+        type="text"
+        class="form-control"
+        placeholder="Seu nome"
+      />
     </div>
 
     <div class="form-group">
-      <input id="signup-email" name="email" type="email" class="form-control" placeholder="Seu email">
+      <input
+        id="signup-email"
+        name="email"
+        type="email"
+        class="form-control"
+        placeholder="Seu email"
+      />
     </div>
 
     <div class="form-group">
-      <input id="nome-da-loja" name="nome-da-loja" type="text" class="form-control" placeholder="Nome da Loja" />
+      <input
+        id="nome-da-loja"
+        name="nome-da-loja"
+        type="text"
+        class="form-control"
+        placeholder="Nome da Loja"
+      />
     </div>
 
     <div class="form-group">
-      <input id="signup-password" name="senha" type="password" class="form-control" placeholder="Sua senha">
+      <input
+        id="signup-password"
+        name="senha"
+        type="password"
+        class="form-control"
+        placeholder="Sua senha"
+      />
     </div>
     <div class="form-group">
-      <input id="sign-up-confirm-password" name="confirmarSenha" type="password" class="form-control" placeholder="Confirme sua senha">
+      <input
+        id="sign-up-confirm-password"
+        name="confirmarSenha"
+        type="password"
+        class="form-control"
+        placeholder="Confirme sua senha"
+      />
     </div>
-    <button type="submit" class="btn btn-login">Entrar</button>
+    <a [routerLink]="['/dashboard']" class="btn btn-login">Entrar</a>
   </form>
-  <small>Já possui conta? <span><a [routerLink]='["/login"]'>Clique aqui</a></span></small>
+  <small
+    >Já possui conta?
+    <span><a [routerLink]="['/login']">Clique aqui</a></span></small
+  >
 </div>
